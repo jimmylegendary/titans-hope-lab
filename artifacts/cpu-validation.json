@@ -1,0 +1,91 @@
+{
+  "exit_code": 0,
+  "platform": "linux-x86_64",
+  "projects": [
+    {
+      "cwd": "implementations/titan-llama",
+      "ok": true,
+      "project": "titan-llama",
+      "pytest": {
+        "command": [
+          ".venv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-x",
+          "tests/test_titan_llama_runtime.py",
+          "tests/test_titans.py::test_return_surprises",
+          "tests/test_titans.py::test_titans_second_order_momentum",
+          "tests/test_titans.py::test_neural_mem_chaining_chunks",
+          "tests/test_titans.py::test_neural_mem_chaining_with_weight_residual",
+          "tests/test_titans.py::test_neural_mem_chaining_with_batch_size",
+          "tests/test_titans.py::test_neural_mem_inference",
+          "tests/test_titans.py::test_mem_state_detach",
+          "tests/test_titans.py::test_titans[True-False-False-1-None-1-False-False-64-True-False-32]",
+          "tests/test_titans.py::test_titans[False-False-False-1-None-4-False-False-64-True-False-32]",
+          "tests/test_titans.py::test_mac[False-False-None-False-8-False-0-0-1023]",
+          "tests/test_titans.py::test_mac[False-True-None-False-8-False-0-0-17]",
+          "tests/test_titans.py::test_titans_attn_memory",
+          "tests/test_titans.py::test_swiglu_ff_memory"
+        ],
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "passed": 57,
+        "skipped": 2,
+        "stdout": ".........................................................ss              [100%]\n57 passed, 2 skipped in 17.42s\n"
+      },
+      "sync": {
+        "command": [
+          "uv",
+          "sync",
+          "--locked",
+          "--extra",
+          "research",
+          "--extra",
+          "test"
+        ],
+        "exit_code": 0,
+        "stdout": "Using CPython 3.13.12\nCreating virtual environment at: .venv\nResolved 98 packages in 1ms\n   Building titans-review-artifact @ file://<repo><local-path>\nDownloading hf-xet (4.0MiB)\nDownloading pydantic-core (2.1MiB)\nDownloading pygments (1.2MiB)\nDownloading transformers (11.4MiB)\nDownloading numpy (15.9MiB)\nDownloading pyarrow (51.4MiB)\nDownloading pandas (10.3MiB)\nDownloading networkx (2.0MiB)\nDownloading tokenizers (3.1MiB)\nDownloading sympy (6.0MiB)\nDownloading aiohttp (1.8MiB)\nDownloading wandb (19.4MiB)\n      Built titans-review-artifact @ file://<repo><local-path>\nDownloading torch (175.8MiB)\n Downloaded pygments\n Downloaded aiohttp\n Downloaded networkx\n Downloaded pydantic-core\n Downloaded tokenizers\n Downloaded hf-xet\n Downloaded sympy\n Downloaded pandas\n Downloaded transformers\n Downloaded numpy\n Downloaded wandb\n Downloaded pyarrow\n Downloaded torch\nPrepared 84 packages in 27.69s\nInstalled 84 packages in 171ms\n + accelerate==1.15.0\n + accelerated-scan==0.3.1\n + aiohappyeyeballs==2.7.1\n + aiohttp==3.14.5\n + aiosignal==1.4.0\n + annotated-types==0.8.0\n + anyio==4.15.1\n + assoc-scan==0.0.6\n + attrs==26.1.0\n + axial-positional-embedding==0.3.12\n + certifi==2026.10.19\n + charset-normalizer==3.5.2\n + click==8.5.0\n + cwevals==0.0.1b1\n + datasets==5.0.1\n + dill==0.4.1\n + distro==1.9.0\n + einops==0.8.2\n + einx==0.4.3\n + filelock==4.2.4\n + frozendict==2.4.7\n + frozenlist==1.8.0\n + fsspec==2026.6.0\n + googleapis-common-protos==1.75.5\n + h11==0.16.0\n + hf-xet==1.7.0\n + httpcore==1.0.9\n + httpx==0.28.1\n + huggingface-hub==0.36.2\n + hyper-connections==0.4.11\n + idna==3.20\n + iniconfig==2.3.1\n + jinja2==3.1.6\n + loguru==0.7.3\n + markupsafe==3.0.4\n + mpmath==1.3.0\n + multidict==7.1.0\n + multiprocess==0.70.19\n + networkx==3.7\n + ninja==1.13.2\n + numpy==2.5.4\n + opentelemetry-api==1.45.1\n + opentelemetry-exporter-http-transport==0.66b1\n + opentelemetry-exporter-otlp-common==0.66b1\n + opentelemetry-exporter-otlp-proto-common==1.45.1\n + opentelemetry-exporter-otlp-proto-http==1.45.1\n + opentelemetry-proto==1.45.1\n + opentelemetry-sdk==1.45.1\n + opentelemetry-semantic-conventions==0.66b1\n + packaging==26.3\n + pandas==3.0.6\n + platformdirs==4.13.5\n + pluggy==1.7.0\n + propcache==0.5.4\n + protobuf==7.36.2\n + psutil==7.2.2\n + pyarrow==26.0.0\n + pydantic==2.14.1\n + pydantic-core==2.50.1\n + pygments==2.21.0\n + pytest==9.1.1\n + python-dateutil==2.9.0.post0\n + pyyaml==6.0.3\n + regex==2026.9.29\n + requests==2.34.2\n + rotary-embedding-torch==0.9.1\n + safetensors==0.8.0\n + setuptools==84.2.0\n + six==1.17.0\n + sniffio==1.3.1\n + sympy==1.14.0\n + titans-review-artifact==0.1.0 (from file://<repo><local-path>)\n + tokenizers==0.22.2\n + torch==2.9.1+cpu\n + torch-einops-utils==0.1.36\n + tqdm==4.70.1\n + transformers==4.57.3\n + typing-extensions==4.16.0\n + typing-inspection==0.4.4\n + urllib3==2.8.0\n + wandb==0.31.0\n + x-transformers==2.31.8\n + xxhash==4.0.2\n + yarl==1.25.1\n"
+      }
+    },
+    {
+      "cwd": "implementations/hope",
+      "ok": true,
+      "project": "hope",
+      "pytest": {
+        "command": [
+          ".venv/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "-x"
+        ],
+        "errors": 0,
+        "exit_code": 0,
+        "failed": 0,
+        "passed": 12,
+        "skipped": 1,
+        "stdout": "...s.........                                                            [100%]\n12 passed, 1 skipped in 13.27s\n"
+      },
+      "sync": {
+        "command": [
+          "uv",
+          "sync",
+          "--locked",
+          "--extra",
+          "train",
+          "--extra",
+          "dev"
+        ],
+        "exit_code": 0,
+        "stdout": "Using CPython 3.13.12\nCreating virtual environment at: .venv\nResolved 65 packages in 1ms\n   Building nested-learning-hope @ file://<repo><local-path>\n      Built nested-learning-hope @ file://<repo><local-path>\nPrepared 6 packages in 452ms\nInstalled 29 packages in 159ms\n + anyio==4.15.1\n + click==8.5.0\n + filelock==4.2.4\n + fsspec==2026.9.0\n + h11==0.16.0\n + hf-xet==1.7.0\n + httpcore2==2.15.1\n + httpx2==2.15.1\n + huggingface-hub==2.2.0\n + idna==3.20\n + iniconfig==2.3.1\n + jinja2==3.1.6\n + markupsafe==3.0.4\n + mpmath==1.3.0\n + nested-learning-hope==1.0.0 (from file://<repo><local-path>)\n + networkx==3.7\n + numpy==2.5.4\n + packaging==26.3\n + pluggy==1.7.0\n + pyarrow==26.0.0\n + pygments==2.21.0\n + pytest==9.1.1\n + pyyaml==6.0.3\n + setuptools==84.2.0\n + sympy==1.14.0\n + torch==2.9.1+cpu\n + tqdm==4.70.1\n + truststore==0.10.5\n + typing-extensions==4.16.0\n"
+      }
+    }
+  ],
+  "python": "3.14.3",
+  "threads": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  }
+}

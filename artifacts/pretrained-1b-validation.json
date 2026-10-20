@@ -1,0 +1,62 @@
+{
+  "command": [
+    "implementations/titan-llama/.venv/bin/python",
+    "scripts/verify_pretrained_titan_llama.py",
+    "--local-only"
+  ],
+  "cache": "Existing cache of the pinned public model revision, reused for this run",
+  "exit_code": 0,
+  "stages": [
+    {
+      "stage": "snapshot",
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "revision": "5a8abab4a5d6f164389b1079fb721cfab8d7126c",
+      "local_only": true
+    },
+    {
+      "stage": "snapshot_ready"
+    },
+    {
+      "stage": "loaded",
+      "layers": 16,
+      "converted_layers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "trainable": 17227872,
+      "seconds": 3.237
+    },
+    {
+      "stage": "backward",
+      "loss": 7.337148189544678,
+      "nmm_nonzero_grad_tensors": 44,
+      "base_gradients": false,
+      "tokens": 16
+    },
+    {
+      "stage": "cached_decode",
+      "logits_shape": [
+        1,
+        1,
+        128256
+      ],
+      "cache_type": "Cache"
+    },
+    {
+      "stage": "complete",
+      "status": "PASS",
+      "source_git_head": "9ea21d6d86367f581f656a3886c8baedaf5697d8",
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "revision": "5a8abab4a5d6f164389b1079fb721cfab8d7126c",
+      "device": "cpu",
+      "dtype": "float32",
+      "segment_length": 4,
+      "input_tokens": 16,
+      "elapsed_seconds": 6.928,
+      "peak_rss_mib": 6948.6,
+      "paper_quality_reproduced": false
+    }
+  ]
+}

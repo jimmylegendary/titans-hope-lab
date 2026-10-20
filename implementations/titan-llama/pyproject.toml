@@ -1,0 +1,93 @@
+[project]
+name = "titans-review-artifact"
+version = "0.1.0"
+description = "Anonymous code artifact for Titan-Llama experiments"
+authors = [
+    { name = "Anonymous Authors" }
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+license = { file = "LICENSE" }
+keywords = [
+    'artificial intelligence',
+    'deep learning',
+    'test time training',
+    'linear attention',
+    'memory',
+]
+
+classifiers=[
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3.10',
+]
+
+dependencies = [
+    "assoc-scan",
+    "axial_positional_embedding>=0.3.10",
+    "einops>=0.8.0",
+    "einx>=0.3.0",
+    "hyper-connections>=0.1.11",
+    "Ninja",
+    "rotary-embedding-torch",
+    "torch>=2.9,<2.10",
+    "tqdm",
+    "x-transformers"
+]
+
+[project.optional-dependencies]
+
+research = [
+    "datasets>=2.10.0",
+    "transformers==4.57.3",
+    "accelerate>=0.20.0",
+    "numpy>=1.21.0",
+    "wandb",
+]
+
+examples = [
+    "adam-atan2-pytorch>=0.1.18",
+    "wandb"
+]
+
+test = [
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["titans_pytorch"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"titan_llama.py" = "titan_llama.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/data", "/wandb", "/checkpoints", "/outputs", "*.pt", "*.out", "*.err"]
+
+[tool.uv]
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

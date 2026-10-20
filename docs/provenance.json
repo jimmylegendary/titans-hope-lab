@@ -1,0 +1,34 @@
+{
+  "snapshot_date": "2026-10-20",
+  "repository": "https://github.com/jimmylegendary/titans-hope-lab",
+  "layout": "Two independent Python projects, imported as code snapshots with separate CPU locks and environments",
+  "projects": {
+    "titan-llama": {
+      "path": "implementations/titan-llama",
+      "upstream_repository": "https://github.com/sarahpannn/titans-pytorch",
+      "upstream_commit": "c60b4efaa3a3c6df4deebd57cbccf75947b87cad",
+      "inherited_titans_core_repository": "https://github.com/lucidrains/titans-pytorch",
+      "inherited_titans_core_commit": "1d40c445fa1794fb28582c721786482b5b683e47",
+      "validated_pre_publication_snapshot": "9ea21d6d86367f581f656a3886c8baedaf5697d8",
+      "license": "MIT",
+      "paper": "https://arxiv.org/abs/2610.19210"
+    },
+    "hope": {
+      "path": "implementations/hope",
+      "upstream_repository": "https://github.com/smallhours19/nested-learning-hope",
+      "upstream_commit": "5fdbe522a9b10279661530aea5bf8dd7f9b4c180",
+      "validated_pre_publication_snapshot": "9ebfe97a186304fd06c692ecf0f5b96ab4a6cad9",
+      "runtime_verified_pre_publication_commit": "c57521d235b5530ddf1f84512ba4709180b30f5d",
+      "license": "MIT",
+      "paper": "https://arxiv.org/abs/2512.24695"
+    }
+  },
+  "snapshot_hash_note": "Pre-publication snapshot identifiers document local source provenance; they are not claimed to be fetchable commits in the upstream repositories.",
+  "publication_changes": [
+    "Monorepo layout with separate project environments",
+    "Portable public documentation and verification entrypoints",
+    "Original license notices preserved",
+    "Large datasets, model weights, upstream reference images/results and local development artifacts excluded"
+  ],
+  "scope": "Runnable research implementations with documented approximations; paper-scale performance reproduction is not claimed"
+}
